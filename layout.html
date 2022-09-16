@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>css 레이아웃 기법</title>
+		<link href="favicon.png" rel=shortcut icon">
+		
+		<style >
+			.container{
+			 	max-width: 1000px;
+			 	max-height: 500px; 
+			 	margin: 0 auto;
+			}
+			
+			.position{
+			 background-color: lightyellow;
+			}
+			
+			.box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				box-sizing: border-box;  /* 상자의 크기가 커지지 않음  상자크기 테두리 포함*/
+			}
+			
+			.static{
+				position: static;
+				top: 100px;   /* 위치 속성이 없음 */
+				left: 100px;
+				
+			}
+			
+			.absolute{
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				
+				
+			
+			}
+			.relative{
+				position: relative;
+				width: 300px;
+				height : 300px;
+				top: 100px;
+				left: 100px;
+			}
+			
+			.fixed{
+				position: fixed;
+				bottom: 100px;
+				right: 100px;
+			}
+			
+			.sticky{
+				position: sticky;
+				top: 50px;
+				background-color: yellow;
+			}
+			
+			.float img{
+				float: right;
+				margin-right: 1rem;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1>레이아웃</h1>
+		<p>배치의 다른 말 , 각종 UI요소들을 원한는 곳에 두는 방법 </p>
+		<header class ="sticky">
+		<h2 >레이아웃 기법의 종류</h2>
+		
+		<ol>
+		  <li> 블럭vs 인라인 </li>
+		  <li> Item two </li>
+		  <li> 포지셔닝 </li>
+		  <li> 플렉스 </li>
+		  <li> 그리드 </li>
+		  <li> 다중캄럼 </li>
+		</ol>
+		</header>
+		<h3>레이아웃 실습</h3>
+		<h4>블럭 VS 인라인</h4>
+		<p>인라인 요소(INLine)는 가로에 여러개 컨텐츠가 넘치면 자동으로 줄바꿈 </p>
+		
+		<div>
+			<p>짧은단락 </p>
+			<a href ="#">링크1</a>
+			
+		</div>
+		
+		<h3>레이아웃 실습</h3>
+		<h4>포지셔닝</h4>
+		
+		<ul>
+		 	<li>position : static[일반적인 흐름에 따라 요소를 배치]</li>
+		 	<li>position : absolute[절대위치에 배치]</li>
+		 	<li>position : relative[상대위치]</li>
+		 	<li>position : fixed[고정위치]</li>
+		 	<li>position : sticky(아직 표준 x)</li>
+		</ul>
+
+		<div class ="container position">
+		<p class ="text">조금 긴 단락 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quasi neque voluptatem atque repellat fugiat dignissimos amet ratione accusantium odit. Illo animi aliquam voluptates ullam consequuntur et accusamus deleniti quas.</p>
+			<div class ="box static">static 상자</div>
+			<div class ="box relative">relative 상자
+				<div class ="box absolute">absolute 상자</div> 
+			</div> 
+			<div class ="box fixed"><a href ="javascript:void(0);">🔺top</a></div>
+			
+		</div>
+	
+	
+		<h3>레이아웃 실습</h3>
+		<h4>플로팅</h4>
+		<p>컨텐츠의 위치를 지저하는 방법, 좌, 우로만 배치할 수 있음 언젠가 CLEAR해야 함 </p>
+		
+		<div class ="container float">
+			<img alt="dummy image" src="images/logo.png">
+			<p>그냥 텍스트를 적습니다컨텐츠의 위치를 지저하는 방법, 좌, 우로만 배치할 수 있음 언젠가 CLEAR해야 함 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste culpa cum amet veritatis voluptatibus tenetur necessitatibus repudiandae beatae iusto numquam. Optio voluptatum nemo molestiae est deleniti minima delectus quis in. </p>
+		   <p>그냥 텍스트를 적습니다컨텐츠의 위치를 지저하는 방법, 좌, 우로만 배치할 수 있음 언젠가 CLEAR해야 함 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste culpa cum amet veritatis voluptatibus tenetur necessitatibus repudiandae beatae iusto numquam. Optio voluptatum nemo molestiae est deleniti minima delectus quis in. </p>
+		   <p>그냥 텍스트를 적습니다컨텐츠의 위치를 지저하는 방법, 좌, 우로만 배치할 수 있음 언젠가 CLEAR해야 함 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste culpa cum amet veritatis voluptatibus tenetur necessitatibus repudiandae beatae iusto numquam. Optio voluptatum nemo molestiae est deleniti minima delectus quis in. </p>
+		   <p>그냥 텍스트를 적습니다컨텐츠의 위치를 지저하는 방법, 좌, 우로만 배치할 수 있음 언젠가 CLEAR해야 함 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste culpa cum amet veritatis voluptatibus tenetur necessitatibus repudiandae beatae iusto numquam. Optio voluptatum nemo molestiae est deleniti minima delectus quis in. </p>
+		   
+		</div>
+	
+
+	
+	
+	</body>
+</html>
