@@ -9,8 +9,39 @@
 }
 
 html { font-size: 20px; }
+/* ========== popup style =============== */
+#popup{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vm;   /*00%랑 같은 말*/ 
+	height: 100vh;
+	z-index: 9999; /*포지셔닝  */
+}
+	
+#popup.bg{
+	background-color: rgba(0,0,0, .3);
+	
+	
+}
 
+.content{
+	position: absolute;
+	width: 940px;
+	height: 530px;
+	left: 50%;
+	top: 50%
+	margin-left  calc(-940px/2);
+	margin-right:  calc(-530px/2);
+}
+
+#close{
+	position:  absolute;
+	width : 100px;
+}
 /* ========== google font icon style =============== */
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -24,6 +55,7 @@ body {
 	color: #222;
 	line-height: 1.5;
 	letter-spacing: -1px;	
+	/*overflow: hidden;*/
 }
 
 .header-top {
@@ -224,6 +256,29 @@ article {
 	padding: 1rem;
 }
 
+
+/* ===============about================  */
+
+.synopsis{
+	float: left;
+	position: relative;
+}
+
+.synopsis img{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	
+}
+
+.story {
+	
+	border: 1px solid black;
+}
+
+table td{
+	paddimng : 20px;
+}
 .goods-list{
 	overflow:hidden;	
 }
@@ -245,4 +300,22 @@ article {
 .item-title, .item-price, .btns{
 	text-align: center;
 }
-
+/* =============footer================== */
+footer{
+	margin: 2rem 0;
+}
+footer .container{
+	position: relative;
+}
+.guide-links li{
+	display: inline-block;
+	font-size: .825rem;
+}
+.guide-links li:nth-child(2){
+	margin: 0 .5rem;
+}
+.logo-bottom{
+	position: absolute;
+	right: 0;
+	top: 1rem;
+}

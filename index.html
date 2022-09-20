@@ -12,10 +12,30 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="css/style.css" />
-		
+		<script src = "//code.jquery.com/jquery-lastest.min.js"></script>
 	</head>
 	<body>
+		<script>
+			$(function(){
+				setTimeout(showAfterLoad, 3000); //3초 뒤 함수 호출
+				function showAfterLoad(){
+					$("#popup").css("display", "block");
+					$("#body").css("overflow", "hidden");
+				}
+				$("#close").click(function(){
+					//#pop 감춰줘
+					$("#popup").css("display", "none");
+					$("#body").css("overflow", "auto");
+				})
+			})
+		</script>
 		<h1 class="d-none">Minions: The Rise of Gru</h1>
+		<div id = "popup" class = "bg">
+			<div class ='content'>
+				<img alt="" src="images/big-event-cut.png">
+			</div>
+			<button type="button" id = "close">&times;</button> //
+		</div>
 		<header>
 			<div class="header-top">
 				<ul class="links">
@@ -80,19 +100,22 @@
 					<p>미니언스2 관림후기</p>
 				</div>
 				<div class = "container-fluid">
-				<div class ="prev">
-					<span class="material-symbols-outlined">
+					<div class ="prev">
+						<span class="material-symbols-outlined">
 						chevron_left
-					</span>
+						</span>
 				</div>
 					<div class ="carousel">
 						<div class ="attach-img">
 							<img alt="첨부" src="images/attach.png">
 						</div>
 						<div class ="user-post">
-							<p class = "post-boy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in.</p>
-							<p class = "post-date">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in.</p>
-							<p class = "post-author">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in.</p>
+						<p></p>
+				 		<p></p>
+				 	 	<p></p>
+							<p class = "post-boy">오랜만에 미니언즈 영접해서 넘 좋았어요</p>
+							<p class = "post-date">2022. 07. 20</p>
+							<p class = "post-author">momo1212</p>
 						</div>
 						
 					</div>
@@ -138,15 +161,27 @@
 					</ul>
 				</div>
 			</article>
-			<article>
-				<h3>sns</h3>
-				<p>미니언즈2 인스타</p>
-			</article>
-			<article>
-				<h3>event</h3>
-				<p>미니언즈2 이벤트</p>
-			</article>
 		</section>
+		<aside>
+			<div class="container-fluid mt-100">
+				<div class="container">
+					<img src="images/banner.jpg" alt="맥도날드 x 미니언즈2">
+				</div>
+			</div>
+		</aside>
+		<footer>
+			<div class="container">
+				<ul class="guide-links">
+					<li><a href="#">제휴업체</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보취급방침</a></li>
+				</ul>
+				<p>copyrigntⓒ 2022 <strong class="owner">minions&trade;</strong>.all rights reserved</p>
+			<div class="logo-bottom">
+				<a href="#"><img src="images/footer_logo.png" alt="footer"></a>
+			</div>
+			</div>	
+		</footer>
 	</body>
 </html>
 
